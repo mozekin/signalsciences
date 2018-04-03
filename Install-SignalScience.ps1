@@ -56,6 +56,8 @@ elseif ($INPUT -eq 'N') {
 Set-Content -Path $AGENTCONF -Value @"
 accesskeyid = "REDACTED"
 secretaccesskey = "REDACTED"
+rpc-address = "127.0.0.1:9999"
+rpc-version = 1
 "@
 
 Write-Host 'Restarting Signal Sciences Windows Service for agent config re-initialisation...'
