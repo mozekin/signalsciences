@@ -33,7 +33,9 @@ $INPUT = Read-Host "Before installing the sigsci IIS module, IIS needs to be sto
 
 If ($INPUT -eq 'Y') { 
 
+    Write-Host 'Stopping IIS...'
     Invoke-Command { Set-Location C:\Windows\System32\; ./cmd.exe /c "iisreset /noforce /stop" }
+
     Write-Host 'Copying DLL for IIS module installation...'
     Copy-Item $TMP\SigSciIISModule.dll "C:\Program Files\Signal Sciences\" -Force -PassThru
 
@@ -52,7 +54,8 @@ elseif ($INPUT -eq 'N') {
 # Access keys for Signal Sciences agent activation and configuration
 
 Set-Content -Path $AGENTCONF -Value @"
-$(Get-Content $SIGSCIPARAMS)
+accesskeyid = "REDACTED"
+secretaccesskey = "REDACTED"
 "@
 
 Write-Host 'Restarting Signal Sciences Windows Service for agent config re-initialisation...'
