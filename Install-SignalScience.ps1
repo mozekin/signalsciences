@@ -1,6 +1,5 @@
 
 $TMP = $env:temp
-$APPCMD = "C:\windows\system32\inetsrv\appcmd.exe"
 $WAFINSTALLER = "$TMP\sigsci.msi"
 $WAFIISMODULE = "$TMP\sigsci-iis.msi"
 $AGENTCONF = "C:\Program Files\Signal Sciences\Agent\agent.conf"
