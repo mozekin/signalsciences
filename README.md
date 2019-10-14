@@ -8,4 +8,6 @@ integrate your application with the module, you will need to install both the Wi
 ## Installation
 powershell Install-SignalSciences.ps1
 
-### Note: There is user prompt requiring user interaction upon execution
+Note: There is user prompt requiring user interaction upon execution
+
+Ensure the accesskeyid and secretaccesskey variables are updated within the script.
